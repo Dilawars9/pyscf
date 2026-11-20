@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore an atom-mapped butane path with synchronized molecular geometry measurements.">
+  <title>Butane path explorer · Dilawar</title>
+  <style>__REPORT_CSS__</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">DILAWAR / MOLECULAR GEOMETRY</div>
+    <h1>A closer look at a molecular path.</h1>
+    <p class="intro">Butane, trans to gauche. Rotate the molecule, follow its torsion, and inspect every interpolated geometry.</p>
+    <div class="facts"><span><strong id="image-count">101</strong> geodesic images</span><span>14 mapped atoms</span><span>Geometry only · no energies or gradients</span></div>
+  </header>
+
+  <section class="workspace" aria-label="Molecular path explorer">
+    <div class="molecule-column">
+      <div class="panel-heading"><h2>Molecular view</h2><span id="frame-caption" class="badge">Image 0 / 100</span></div>
+      <div class="view-controls">
+        <label>Path <select id="path-choice"><option value="geodesic">Geodesic interpolation</option><option value="cartesian">Cartesian baseline</option></select></label>
+        <button id="reset-view" type="button">Reset camera</button>
+      </div>
+      <div class="molecule-stage">
+        <div id="molecule" role="img" aria-label="Interactive 3D ball-and-stick model of butane"></div>
+        <div id="viewer-error" role="status" hidden></div>
+        <span class="stage-caption">Drag to rotate · scroll or pinch to zoom</span>
+      </div>
+      <div class="playback">
+        <button id="play" type="button" class="primary">Play path</button>
+        <label for="speed">Speed <select id="speed"><option value="8">8 fps</option><option value="16" selected>16 fps</option><option value="30">30 fps</option></select></label>
+        <label class="check"><input id="show-h" type="checkbox" checked> Hydrogens</label>
+        <label class="check"><input id="show-labels" type="checkbox" checked> Carbon labels</label>
+      </div>
+      <label class="frame-label" for="frame">Image <output id="frame-value">0</output><span id="progress-value">0% of image sequence</span></label>
+      <input id="frame" type="range" min="0" max="100" value="0" step="1">
+      <div class="frame-ends"><button id="first" type="button">Trans endpoint</button><button id="last" type="button">Gauche endpoint</button></div>
+      <div class="selection-note"><span class="selection-swatch"></span><span id="selected-atoms">Highlighted: C1–C2–C3–C4</span></div>
+    </div>
+
+    <div class="measurement-column">
+      <div class="panel-heading"><h2>Geometry along the path</h2></div>
+      <div class="legend"><span><i class="geo-line"></i> Geodesic</span><label><input id="baseline" type="checkbox" checked> <i class="base-line"></i> Cartesian baseline</label></div>
+      <div id="charts"></div>
+      <p class="small">Choose a coordinate to highlight its atoms. Click a graph to select an image. Dihedrals are unwrapped along each continuous, defined segment.</p>
+    </div>
+  </section>
+
+  <section class="custom-section" aria-labelledby="custom-heading">
+    <div><h2 id="custom-heading">Track your own coordinate</h2><p>Use the atom numbers shown in the molecular view. Distances can include any pair, including nonbonded contacts.</p></div>
+    <form id="custom-form">
+      <label>Measurement <select id="custom-kind"><option value="distance">Distance · 2 atoms</option><option value="angle">Angle · 3 atoms</option><option value="dihedral">Dihedral · 4 atoms</option></select></label>
+      <label>Atom numbers <input id="custom-atoms" value="1, 4" placeholder="e.g. 1, 2, 3, 4" autocomplete="off"></label>
+      <button id="pick-atoms" type="button">Pick atoms</button><button type="submit" class="primary">Track atoms</button>
+    </form>
+    <p id="custom-status" role="status">Atom numbers are 1-based; carbon atoms are 1–4 and hydrogen atoms are 5–14.</p>
+  </section>
+
+  <section class="notes-section">
+    <div><h2>Take the data with you</h2><p>Export the full sequence or the currently selected geometry. CSV includes selected and automatically enumerated coordinates for both paths.</p>
+      <div class="downloads"><button id="download-path" type="button">Download path XYZ</button><button id="download-frame" type="button">Download this image</button><button id="download-csv" type="button">Download measurements CSV</button></div>
+    </div>
+    <div><h2>What this example shows</h2><p>Idealized tetrahedral butane endpoints, with a fixed atom mapping and reference bond graph. All __IMAGE_COUNT__ requested images enter geodesic optimization; none are added just for playback.</p><p>This is a geometric interpolation, without a physical time axis or an energy-minimized reaction path. Optimizer convergence is not certified. The Cartesian baseline connects the same aligned endpoint frames.</p></div>
+  </section>
+  <details id="export-preview" hidden><summary id="export-name">Export text</summary><p>If your browser blocks downloads, copy the text below into a file with the displayed name.</p><textarea id="export-text" readonly aria-label="Exported file contents" rows="6"></textarea></details>
+  <footer><p>Created by Dilawar · PySCF integration and path analysis · Molecular rendering by 3Dmol.js 2.5.5</p>
+    <details><summary>Reproduction details and third-party license</summary><pre id="metadata"></pre><p>3Dmol.js bundle SHA-256: <code>__VIEWER_SHA256__</code></p><pre>__THIRD_PARTY_LICENSE__</pre></details>
+  </footer>
+</main>
+<script>__VIEWER_LIBRARY__</script>
+<script id="path-data" type="application/json">__DATA_JSON__</script>
+<script>__REPORT_JS__</script>
+</body>
+</html>

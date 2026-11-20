@@ -1,0 +1,28 @@
+{
+  "nimages": 101,
+  "natoms": 14,
+  "seed": 7,
+  "interpolation_seconds": 1.4794118340000002,
+  "maxiter": 50,
+  "tolerance": 0.002,
+  "electronic_energy_calls": 0,
+  "electronic_gradient_calls": 0,
+  "frames": "All requested frames enter geodesic optimization; no display resampling.",
+  "endpoint_preparation": "Analytic idealized tetrahedral butane, C-C 1.54 A, C-H 1.09 A; trans 180 to gauche +60 deg with fixed atom mapping.",
+  "baseline": "Cartesian linear interpolation in the geodesic endpoint frames.",
+  "connectivity": "Fixed reference graph, not inferred bond orders.",
+  "backend": {
+    "version": "1.0.0",
+    "sparse_solver": true,
+    "source_commit": "476aa041f562d37d5fb4121b86817a52d75e4c5d",
+    "source_dirty": false
+  },
+  "python": "3.9.6",
+  "packages": {
+    "pyscf": "2.15.0",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  },
+  "limitation": "No energy-minimized path or certified geodesic convergence."
+}

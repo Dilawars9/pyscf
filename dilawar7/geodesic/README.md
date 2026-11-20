@@ -5,6 +5,13 @@ to PySCF molecular objects. It generates a geometric path between atom-mapped
 endpoints. PySCF can then evaluate an energy and gradient at each image.
 Our work is on branch `dilawar7/geodesic-interpolation`.
 
+**Start here:** [Butane path explorer](BUTANE.md) — 101 geometries, a rotatable
+3D molecule, synchronized distance/angle/dihedral graphs, atom picking and
+coordinate exports. This example makes no electronic energy or gradient calls.
+
+Download and open [the standalone HTML report](results/butane/report.html) in
+your browser; GitHub itself shows HTML source.
+
 ```mermaid
 flowchart LR
     A[Atom-mapped endpoint molecules] --> B[Geodesic interpolation]
@@ -18,6 +25,8 @@ flowchart LR
 - `examples/`: runnable examples and shared output/plotting code.
 - `results/hydrogen_exchange/`: saved H + H2 exchange path and UHF/STO-3G scan.
 - `results/water_bending/`: saved water bending path and RHF/STO-3G scan.
+- `results/butane/`: geometry-only 101-image path, measurements and HTML report.
+- `report/`: editable viewer/report source and pinned third-party bundle.
 - `tests/`: independent checks of the exported geometries and energies.
 - The importable adapter stays at [`pyscf/geomopt/geodesic.py`](../../pyscf/geomopt/geodesic.py).
 - Adapter tests stay at [`pyscf/geomopt/test/test_geodesic.py`](../../pyscf/geomopt/test/test_geodesic.py).
