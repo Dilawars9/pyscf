@@ -1,0 +1,22 @@
+{
+  "title": "Hydrogen exchange: H + H2 to H2 + H",
+  "seed": 7,
+  "nimages": 5,
+  "basis": "sto-3g",
+  "charge": 0,
+  "spin": 1,
+  "method": "UHF",
+  "scf_conv_tol": 1e-11,
+  "coordinate_unit": "Angstrom",
+  "energy_unit": "Hartree",
+  "gradient_unit": "Hartree/Bohr",
+  "python": "3.9.6",
+  "packages": {
+    "pyscf": "2.15.0",
+    "geodesic-interpolate": "1.0.0",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  },
+  "limitation": "Geometric path only; no energy-based path optimization or geodesic convergence certification."
+}

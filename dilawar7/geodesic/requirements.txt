@@ -1,0 +1,4 @@
+# Example and test tools; install the PySCF fork separately as documented.
+geodesic-interpolate==1.0.0
+matplotlib>=3.5
+pytest>=7
