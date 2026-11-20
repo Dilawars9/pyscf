@@ -53,6 +53,7 @@ Documentation = "http://www.pyscf.org"
 
 forge = ["pyscf-forge"]
 geomopt = ["pyberny>=0.6.2", "geometric>=0.9.7.2", "pyscf-qsdopt"]
+geodesic = ["geodesic-interpolate>=1.0.0"]
 doci = ["pyscf-doci"]
 properties = ["pyscf-properties"]
 semiempirical = ['pyscf-semiempirical']
