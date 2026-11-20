@@ -4,6 +4,12 @@ This geometry-only example follows idealized trans butane to a gauche conformer.
 There are 14 explicitly mapped atoms and 101 geodesic images. It runs no SCF,
 DFT, electronic energy or electronic gradient calculations.
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dilawars9/pyscf/blob/dilawar7/geodesic-interpolation/dilawar7/geodesic/notebooks/butane_path_explorer.ipynb)
+
+The [Colab/Jupyter notebook](notebooks/butane_path_explorer.ipynb) installs the
+packages, generates a path, embeds the viewer and demonstrates the measurement
+functions. Select a CPU runtime and choose **Runtime → Run all**.
+
 ## Open the results
 
 Download [`results/butane/report.html`](results/butane/report.html) and open it in

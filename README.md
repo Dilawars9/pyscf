@@ -1,3 +1,28 @@
+# Dilawar's PySCF fork: geodesic molecular paths
+
+**Start with the geometry-only butane explorer:** 101 interpolated geometries,
+interactive molecular visualization, and bond-length, angle and dihedral tracking.
+No electronic energy or gradient calculations are needed for this example.
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dilawars9/pyscf/blob/dilawar7/geodesic-interpolation/dilawar7/geodesic/notebooks/butane_path_explorer.ipynb)
+
+[Worked examples and code guide](dilawar7/geodesic/README.md) ·
+[Butane walkthrough](dilawar7/geodesic/BUTANE.md) ·
+[Colab/Jupyter notebook](dilawar7/geodesic/notebooks/butane_path_explorer.ipynb) ·
+[Validation](dilawar7/geodesic/VALIDATION.md)
+
+**Looking for the measurement calculations?** They are in
+[`pyscf/geomopt/path_analysis.py`](pyscf/geomopt/path_analysis.py):
+`distances()`, `angles()`, `dihedrals()`, `unwrap_dihedrals()` and `aligned_rmsd()`.
+The interpolation adapter is [`pyscf/geomopt/geodesic.py`](pyscf/geomopt/geodesic.py).
+
+This is a development fork. The geodesic algorithm comes from
+[geodesic-interpolate](https://github.com/virtualzx-nad/geodesic-interpolate);
+our work connects it to PySCF and adds geometry analysis and visualization.
+The upstream PySCF project information follows below.
+
+---
+
 <div align="left">
   <img src="https://github.com/pyscf/pyscf-doc/blob/master/logo/pyscf-logo.png" height="80px"/>
 </div>

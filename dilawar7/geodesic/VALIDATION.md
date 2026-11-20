@@ -1,5 +1,34 @@
 # Local validation — 20 November 2026
 
+## Colab / Jupyter notebook
+
+[`notebooks/butane_path_explorer.ipynb`](notebooks/butane_path_explorer.ipynb)
+was checked against the notebook format schema and executed from top to bottom
+in a fresh local Jupyter kernel. All **nine code cells** completed without
+output errors. No cells were skipped: package installation, fetching the pinned
+source, 101-image generation, viewer assembly, direct measurement calls,
+endpoint checks and ZIP creation all ran. Notebook source is committed with
+execution counts and outputs cleared.
+
+The execution used macOS Python 3.9.6 with PySCF's 2.15.0 wheel, feature revision
+`af7df7057c543e3550bf1506f065126346843c8f` and sparse backend revision
+`476aa041f562d37d5fb4121b86817a52d75e4c5d`. The notebook explicitly reinstalls
+the selected backend so an already-installed dense package with the same
+version number cannot silently be reused. It loads the two feature modules
+from the fork while retaining the wheel's native libraries and other modules.
+
+The generated coordinate array had shape `(101, 14, 3)`, contained 65 tracked
+coordinates, and recorded zero electronic energy and gradient calls. Endpoint
+checks passed. The ZIP contained nine expected output files, including the
+self-contained HTML report. The iframe output was served locally and its
+molecular rendering and linked endpoint/torsion controls were checked in the
+browser. Relative documentation links and notebook code-cell syntax were also
+checked.
+
+These are **local notebook execution checks**. A hosted Google Colab CPU runtime,
+Colab's frontend iframe behavior and its file-download API have not been run or
+certified. They remain distinct from successful execution in local Jupyter.
+
 ## Geometry-only butane explorer
 
 The new geometry analysis and butane example passed **nine focused tests**:
