@@ -9,7 +9,8 @@ No electronic energy or gradient calculations are needed for this example.
 [Worked examples and code guide](dilawar7/geodesic/README.md) ·
 [Butane walkthrough](dilawar7/geodesic/BUTANE.md) ·
 [Colab/Jupyter notebook](dilawar7/geodesic/notebooks/butane_path_explorer.ipynb) ·
-[Validation](dilawar7/geodesic/VALIDATION.md)
+[Validation](dilawar7/geodesic/VALIDATION.md) ·
+[Maintainer notes](MAINTAINER_NOTES.md)
 
 **Looking for the measurement calculations?** They are in
 [`pyscf/geomopt/path_analysis.py`](pyscf/geomopt/path_analysis.py):

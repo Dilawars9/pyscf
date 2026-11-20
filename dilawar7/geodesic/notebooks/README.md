@@ -45,3 +45,6 @@ The interpolation adapter is
 
 For the distinction between local execution checks and a hosted Colab run,
 see the [validation record](../VALIDATION.md).
+
+For updating source pins, regenerating results and maintaining the notebook,
+see [MAINTAINER_NOTES.md](../../../MAINTAINER_NOTES.md).

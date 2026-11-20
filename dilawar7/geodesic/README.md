@@ -8,7 +8,8 @@ calculations**.
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dilawars9/pyscf/blob/dilawar7/geodesic-interpolation/dilawar7/geodesic/notebooks/butane_path_explorer.ipynb)
 
 [Butane guide](BUTANE.md) · [Notebook on GitHub](notebooks/butane_path_explorer.ipynb) ·
-[HTML report](results/butane/report.html) · [Validation record](VALIDATION.md)
+[HTML report](results/butane/report.html) · [Validation record](VALIDATION.md) ·
+[Maintainer notes](../../MAINTAINER_NOTES.md)
 
 ## Try it in Colab
 
